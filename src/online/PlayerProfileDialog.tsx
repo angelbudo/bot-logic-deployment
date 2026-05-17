@@ -179,7 +179,7 @@ export function PlayerProfileDialog({
               <StatBox icon={<ThumbsDown className="w-3 h-3 text-stone-500" />} label="Abandonades" value={profile.abandoned} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-stone-500" />
               <StatBox icon={<Trophy className="w-3 h-3 text-[#ef8e39]" />} label="Victòries" value={profile.wins} accent="text-primary font-bold text-[#ef8e39]" valueClassName="text-slate-100" labelClassName="text-[#ef8e39]" />
               <StatBox icon={<X className="w-3 h-3 text-[#df2020]" />} label="Derrotes" value={profile.losses} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-[#df2020]" />
-              <StatBox icon={<Award className="w-3 h-3 text-[#e6b033]" />} label="% Victòries" value={`${winRate}%`} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#e6b033]" />
+              <StatBox icon={<Trophy className="w-3 h-3 text-[#e6b033]" />} label="% Victòries" value={`${winRate}%`} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#e6b033]" />
               <StatBox icon={<Flame className="w-3 h-3 text-[#f97415]" />} label="Ratxa màx." value={profile.max_streak} accent="font-bold text-slate-100" labelClassName="text-[#f97415]" />
             </div>
 
