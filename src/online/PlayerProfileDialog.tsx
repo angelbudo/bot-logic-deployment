@@ -180,7 +180,7 @@ export function PlayerProfileDialog({
               <StatBox icon={<Trophy className="w-3 h-3 text-[#ef8e39]" />} label="Victòries" value={profile.wins} accent="text-primary font-bold text-[#ef8e39]" valueClassName="text-slate-100" labelClassName="text-[#ef8e39]" />
               <StatBox icon={<X className="w-3 h-3 text-[#df2020]" />} label="Derrotes" value={profile.losses} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-[#df2020]" />
               <StatBox icon={<Trophy className="w-3 h-3 text-[#e6b033]" />} label="% Victòries" value={`${winRate}%`} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#e6b033]" />
-              <StatBox icon={<Flame className="w-3 h-3 text-[#f97415]" />} label="Ratxa màx." value={profile.max_streak} accent="font-bold text-slate-100" labelClassName="text-[#f97415]" />
+              <StatBox icon={<Flame className="w-3 h-3 text-[#66a50d]" />} label="Ratxa màx." value={profile.max_streak} accent="font-bold text-slate-100" labelClassName="text-[#66a50d]" />
             </div>
 
             {!isSelf && (
@@ -227,7 +227,7 @@ export function PlayerProfileDialog({
                                 <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {f.wins + f.losses}</span>
                                 <span className="inline-flex items-center gap-0.5 text-[#ef8e39]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.wins}</span>
                                 <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.losses}</span>
-                                <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.max_streak}</span>
+                                <span className="inline-flex items-center gap-0.5 text-[#66a50d]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.max_streak}</span>
                               </div>
                             </div>
                           </button>
