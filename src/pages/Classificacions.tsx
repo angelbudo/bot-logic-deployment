@@ -99,9 +99,9 @@ function Inner() {
         <CardContent>
           <Tabs defaultValue="wins">
             <TabsList className="grid grid-cols-3 w-full">
-              <TabsTrigger value="wins"><Trophy className="w-4 h-4 mr-1" />Victòries</TabsTrigger>
-              <TabsTrigger value="level"><Star className="w-4 h-4 mr-1" />Nivell</TabsTrigger>
-              <TabsTrigger value="streak"><Flame className="w-4 h-4 mr-1" />Ratxa</TabsTrigger>
+              <TabsTrigger value="wins" className="text-[#ef8e39] data-[state=active]:text-[#ef8e39]"><Trophy className="w-4 h-4 mr-1" />Victòries</TabsTrigger>
+              <TabsTrigger value="level" className="text-[#f97415] data-[state=active]:text-[#f97415]"><Star className="w-4 h-4 mr-1" />Nivell</TabsTrigger>
+              <TabsTrigger value="streak" className="text-[#f97415] data-[state=active]:text-[#f97415]"><Flame className="w-4 h-4 mr-1" />Ratxa</TabsTrigger>
             </TabsList>
             <TabsContent value="wins" className="mt-3"><Board kind="wins" /></TabsContent>
             <TabsContent value="level" className="mt-3"><Board kind="level" /></TabsContent>

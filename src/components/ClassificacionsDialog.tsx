@@ -84,10 +84,10 @@ export function ClassificacionsDialog({ trigger }: { trigger: ReactNode }) {
         </DialogHeader>
         <Tabs defaultValue="level">
           <TabsList className="inline-flex w-auto h-auto gap-1 mx-0 -mx-px -ml-px rounded-xl">
-            <TabsTrigger value="level" className="text-slate-100 py-1.5 text-xs gap-1 px-[6px] mx-0"><Star className="w-3.5 h-3.5 shrink-0" />Nivell</TabsTrigger>
+            <TabsTrigger value="level" className="text-[#f97415] data-[state=active]:text-[#f97415] py-1.5 text-xs gap-1 px-[6px] mx-0"><Star className="w-3.5 h-3.5 shrink-0" />Nivell</TabsTrigger>
             <TabsTrigger value="games" className="text-[#93c572] data-[state=active]:text-[#93c572] py-1.5 text-xs gap-1 px-[6px] mx-0"><Gamepad2 className="w-3.5 h-3.5 shrink-0" />Partides</TabsTrigger>
-            <TabsTrigger value="wins" className="text-slate-100 py-1.5 text-xs gap-1 px-[6px] mx-0"><Trophy className="w-3.5 h-3.5 shrink-0" />Victòries</TabsTrigger>
-            <TabsTrigger value="streak" className="text-slate-100 py-1.5 text-xs gap-1 px-[6px] mx-0"><Flame className="w-3.5 h-3.5 shrink-0" />Ratxa</TabsTrigger>
+            <TabsTrigger value="wins" className="text-[#ef8e39] data-[state=active]:text-[#ef8e39] py-1.5 text-xs gap-1 px-[6px] mx-0"><Trophy className="w-3.5 h-3.5 shrink-0" />Victòries</TabsTrigger>
+            <TabsTrigger value="streak" className="text-[#f97415] data-[state=active]:text-[#f97415] py-1.5 text-xs gap-1 px-[6px] mx-0"><Flame className="w-3.5 h-3.5 shrink-0" />Ratxa</TabsTrigger>
           </TabsList>
           <TabsContent value="level" className="mt-3"><Board kind="level" /></TabsContent>
           <TabsContent value="games" className="mt-3"><Board kind="games" /></TabsContent>
