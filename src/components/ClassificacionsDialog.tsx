@@ -26,9 +26,9 @@ function Board({ kind }: { kind: LeaderboardKind }) {
         const label = e.profile.username ?? "Jugador anònim";
         const games = e.stats.wins + e.stats.losses;
         const kindMeta = {
-          level: { icon: <Star className="w-4 h-4 mt-[2px] text-[#e6b033]" />, value: e.stats.level, className: "text-[#e6b033] text-base -mt-[2px]", style: undefined as CSSProperties | undefined },
+          level: { icon: <Star className="w-4 h-4 mt-[2px] text-[#f97415]" />, value: e.stats.level, className: "text-[#f97415] text-base -mt-[2px]", style: undefined as CSSProperties | undefined },
           games: { icon: <Gamepad2 className="w-4 h-4 text-[#93c572]" />, value: games, className: "text-[#93c572]", style: undefined },
-          wins: { icon: <Trophy className="w-4 h-4 text-[#e6b033]" />, value: e.stats.wins, className: "text-[#e6b033]", style: undefined },
+          wins: { icon: <Trophy className="w-4 h-4 text-[#ef8e39]" />, value: e.stats.wins, className: "text-[#ef8e39]", style: undefined },
           streak: { icon: <Flame className="w-4 h-4 text-[#f97415]" />, value: e.stats.max_streak, className: "text-[#e6b033]", style: undefined },
         }[kind];
         return (
