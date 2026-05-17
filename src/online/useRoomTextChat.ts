@@ -42,20 +42,20 @@ export function useRoomTextChat(roomId: string | null) {
 
     const loadRecent = () => {
       const sinceIso = new Date(Date.now() - MAX_AGE_MS).toISOString();
-      return supabase
+      return (supabase as any)
         .from("room_text_chat")
         .select("*")
         .eq("room_id", roomId)
         .gte("created_at", sinceIso)
         .order("created_at", { ascending: true })
         .limit(MAX_MESSAGES)
-        .then(({ data }) => {
+        .then(({ data }: { data: Row[] | null }) => {
           if (cancelled || !data) return;
           const cutoff = Date.now() - MAX_AGE_MS;
           setMessages((prev) => {
             const byId = new Map<number, RoomTextMessage>();
             for (const m of prev) byId.set(m.id, m);
-            for (const r of data as Row[]) byId.set(r.id, toMsg(r));
+            for (const r of data) byId.set(r.id, toMsg(r));
             return Array.from(byId.values())
               .filter((m) => m.createdAt >= cutoff)
               .sort((a, b) => a.createdAt - b.createdAt)
