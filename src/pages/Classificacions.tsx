@@ -63,7 +63,7 @@ function Board({ kind }: { kind: LeaderboardKind }) {
                       <span className="inline-flex items-center gap-0.5 text-[#df2020]" title="Derrotes">
                         <X className="w-3.5 h-3.5" /> {e.stats.losses}
                       </span>
-                      <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx.">
+                      <span className="inline-flex items-center gap-0.5 text-[#66a50d]" title="Ratxa màx.">
                         <Flame className="w-3.5 h-3.5" /> {e.stats.max_streak}
                       </span>
                     </div>
