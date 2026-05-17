@@ -295,8 +295,11 @@ function Sala() {
         )}
 
         <section className="flex flex-col gap-3">
-          <div className="text-[11px] font-display tracking-widest uppercase text-primary/85 text-center">
-            {t("sala.seats", { joined: joinedHumans, total: expectedHumans })}
+          <div className="flex flex-col items-end gap-0.5 text-[11px] text-muted-foreground">
+            <p>Jugadors: <strong className="text-foreground">{joinedHumans}/{expectedHumans} humans</strong></p>
+            <p>Cames a guanyar: <strong className="text-foreground">{room.targetCames}</strong></p>
+            <p>Punts per cama: <strong className="text-foreground">{room.targetCama}</strong></p>
+            <p>Temps per torn: <strong className="text-foreground">{room.turnTimeoutSec}s</strong></p>
           </div>
           {data.mySeat == null && hasName && room.status === "lobby" && !isHost && (
             <p className="text-[11px] text-primary/90 text-center -mt-1">{t("sala.choose_seat")}</p>
