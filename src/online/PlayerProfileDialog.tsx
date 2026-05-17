@@ -40,7 +40,7 @@ interface PublicFriend {
 function StatBox({ icon, label, value, accent, valueClassName, labelClassName }: { icon: React.ReactNode; label: string; value: React.ReactNode; accent?: string; valueClassName?: string; labelClassName?: string }) {
   return (
     <div className="rounded-md border border-primary/25 bg-background/40 p-2 flex flex-col items-center justify-center text-center">
-      <div className={`flex items-center gap-1 text-[10px] uppercase tracking-widest ${accent ?? "text-muted-foreground"}`}>
+      <div className={`flex items-center gap-1 text-[10px] tracking-widest ${accent ?? "text-muted-foreground"}`}>
         {icon} <span className={labelClassName}>{label}</span>
       </div>
       <div className={`text-xl font-bold ${valueClassName ?? accent ?? "text-foreground"}`}>{value}</div>
@@ -146,7 +146,7 @@ export function PlayerProfileDialog({
                 )}
               </div>
               <div className="min-w-0 flex-1">
-                <div className="font-display font-bold text-lg text-foreground truncate">{displayName}</div>
+                <div className="text-lg font-bold text-foreground truncate normal-case">{displayName}</div>
                 {!isSelf && (
                   <ConnectionStatus
                     online={
