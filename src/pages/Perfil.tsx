@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Trophy, Flame, Star, Users, Copy, UserPlus, Check, X, LogOut, Gamepad2, ThumbsDown } from "lucide-react";
+import { Loader2, Trophy, Flame, Star, Users, Copy, UserPlus, Check, X, LogOut, Gamepad2, ThumbsDown, Award } from "lucide-react";
 import { toast } from "sonner";
 import { ShareAppButton } from "@/components/ShareAppButton";
 import { AvatarPicker } from "@/components/AvatarPicker";
@@ -146,7 +146,7 @@ function PerfilInner() {
                 <StatBox icon={<ThumbsDown className="w-4 h-4 text-stone-500" />} label="Abandonades" value={stats?.abandoned ?? 0} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-stone-500" />
                 <StatBox icon={<Trophy className="w-4 h-4 text-[#ef8e39]" />} label="Victòries" value={wins} accent="text-primary font-bold text-[#ef8e39]" valueClassName="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#ef8e39]" />
                 <StatBox icon={<X className="w-4 h-4 text-[#df2020]" />} label="Derrotes" value={losses} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-[#df2020]" />
-                <StatBox icon={<Star className="w-4 h-4 text-[#e6b033]" />} label="% Victòries" value={`${winRate}%`} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#e6b033]" />
+                <StatBox icon={<Award className="w-4 h-4 text-[#e6b033]" />} label="% Victòries" value={`${winRate}%`} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#e6b033]" />
                 <StatBox icon={<Flame className="w-4 h-4 text-[#f97415]" />} label="Ratxa màx." value={stats?.max_streak ?? 0} accent="font-bold text-slate-100" labelClassName="text-[#f97415]" />
               </div>
 
