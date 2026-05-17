@@ -43,13 +43,13 @@ function Board({ kind }: { kind: LeaderboardKind }) {
                   <div className="min-w-0">
                     <div className={`font-medium truncate ${e.profile.username ? "" : "italic"}`}>{label}</div>
                     <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
-                      <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Nivell">
+                      <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Nivell">
                         <Star className="w-3.5 h-3.5" /> {e.stats.level}
                       </span>
                       <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides">
                         <Gamepad2 className="w-3.5 h-3.5" /> {games}
                       </span>
-                      <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Victòries">
+                      <span className="inline-flex items-center gap-0.5 text-[#ef8e39]" title="Victòries">
                         <Trophy className="w-3.5 h-3.5" /> {e.stats.wins}
                       </span>
                       <span className="inline-flex items-center gap-0.5 text-[#df2020]" title="Derrotes">
