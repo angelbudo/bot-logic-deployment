@@ -340,7 +340,7 @@ function Sala() {
           </div>
         )}
 
-        {isHost && room.status === "lobby" && (
+        {isHost && room.status === "lobby" ? (
           <RoomSettings
             roomId={room.id}
             deviceId={deviceId}
@@ -348,6 +348,11 @@ function Sala() {
             targetCama={room.targetCama}
             turnTimeoutSec={room.turnTimeoutSec}
           />
+        ) : (
+          <div className="flex flex-col gap-1 text-[11px] text-muted-foreground text-center">
+            <p>{t("sala.cames_to_win")} <strong className="text-foreground">{room.targetCames}</strong></p>
+            <p>{t("sala.points_per_cama")} <strong className="text-foreground">{room.targetCama}</strong> · {t("sala.turn_time")} <strong className="text-foreground">{room.turnTimeoutSec}s</strong></p>
+          </div>
         )}
 
         {joinError && <p className="text-xs text-destructive text-center">{joinError}</p>}
