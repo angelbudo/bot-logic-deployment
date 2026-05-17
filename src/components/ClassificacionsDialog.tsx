@@ -26,10 +26,10 @@ function Board({ kind }: { kind: LeaderboardKind }) {
         const label = e.profile.username ?? "Jugador anònim";
         const games = e.stats.wins + e.stats.losses;
         const kindMeta = {
-          level: { icon: <Star className="w-4 h-4 mt-[2px] text-[#f97415]" />, value: e.stats.level, className: "text-[#f97415] text-base -mt-[2px]", style: undefined as CSSProperties | undefined },
+          level: { icon: <Star className="w-4 h-4 mt-[2px] text-[#66a50d]" />, value: e.stats.level, className: "text-[#66a50d] text-base -mt-[2px]", style: undefined as CSSProperties | undefined },
           games: { icon: <Gamepad2 className="w-4 h-4 text-[#93c572]" />, value: games, className: "text-[#93c572]", style: undefined },
           wins: { icon: <Trophy className="w-4 h-4 text-[#ef8e39]" />, value: e.stats.wins, className: "text-[#ef8e39]", style: undefined },
-          streak: { icon: <Flame className="w-4 h-4 text-[#f97415]" />, value: e.stats.max_streak, className: "text-[#e6b033]", style: undefined },
+          streak: { icon: <Flame className="w-4 h-4 text-[#66a50d]" />, value: e.stats.max_streak, className: "text-[#66a50d]", style: undefined },
         }[kind];
         return (
           <PlayerProfileDialog
@@ -43,7 +43,7 @@ function Board({ kind }: { kind: LeaderboardKind }) {
                   <div className="min-w-0">
                     <div className={`font-medium truncate ${e.profile.username ? "" : "italic"}`}>{label}</div>
                     <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
-                      <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Nivell">
+                      <span className="inline-flex items-center gap-0.5 text-[#66a50d]" title="Nivell">
                         <Star className="w-3.5 h-3.5" /> {e.stats.level}
                       </span>
                       <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides">
@@ -55,7 +55,7 @@ function Board({ kind }: { kind: LeaderboardKind }) {
                       <span className="inline-flex items-center gap-0.5 text-[#df2020]" title="Derrotes">
                         <X className="w-3.5 h-3.5" /> {e.stats.losses}
                       </span>
-                      <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx.">
+                      <span className="inline-flex items-center gap-0.5 text-[#66a50d]" title="Ratxa màx.">
                         <Flame className="w-3.5 h-3.5" /> {e.stats.max_streak}
                       </span>
                     </div>
@@ -84,10 +84,10 @@ export function ClassificacionsDialog({ trigger }: { trigger: ReactNode }) {
         </DialogHeader>
         <Tabs defaultValue="level">
           <TabsList className="inline-flex w-auto h-auto gap-1 mx-0 -mx-px -ml-px rounded-xl">
-            <TabsTrigger value="level" className="text-[#f97415] data-[state=active]:text-[#f97415] py-1.5 text-xs gap-1 px-[6px] mx-0"><Star className="w-3.5 h-3.5 shrink-0" />Nivell</TabsTrigger>
+            <TabsTrigger value="level" className="text-[#66a50d] data-[state=active]:text-[#66a50d] py-1.5 text-xs gap-1 px-[6px] mx-0"><Star className="w-3.5 h-3.5 shrink-0" />Nivell</TabsTrigger>
             <TabsTrigger value="games" className="text-[#93c572] data-[state=active]:text-[#93c572] py-1.5 text-xs gap-1 px-[6px] mx-0"><Gamepad2 className="w-3.5 h-3.5 shrink-0" />Partides</TabsTrigger>
             <TabsTrigger value="wins" className="text-[#ef8e39] data-[state=active]:text-[#ef8e39] py-1.5 text-xs gap-1 px-[6px] mx-0"><Trophy className="w-3.5 h-3.5 shrink-0" />Victòries</TabsTrigger>
-            <TabsTrigger value="streak" className="text-[#f97415] data-[state=active]:text-[#f97415] py-1.5 text-xs gap-1 px-[6px] mx-0"><Flame className="w-3.5 h-3.5 shrink-0" />Ratxa</TabsTrigger>
+            <TabsTrigger value="streak" className="text-[#66a50d] data-[state=active]:text-[#66a50d] py-1.5 text-xs gap-1 px-[6px] mx-0"><Flame className="w-3.5 h-3.5 shrink-0" />Ratxa</TabsTrigger>
           </TabsList>
           <TabsContent value="level" className="mt-3"><Board kind="level" /></TabsContent>
           <TabsContent value="games" className="mt-3"><Board kind="games" /></TabsContent>
