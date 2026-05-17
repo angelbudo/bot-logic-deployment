@@ -78,15 +78,15 @@ export function useRoomChat(roomId: string | null, state: MatchState | null = nu
 
     const loadRecentRows = () => {
       const since = new Date(Date.now() - VISIBLE_MS * 3).toISOString();
-      return supabase
+      return (supabase as any)
       .from("room_chat")
       .select("*")
       .eq("room_id", roomId)
       .gte("created_at", since)
       .order("created_at", { ascending: true })
-      .then(({ data }) => {
+      .then(({ data }: { data: ChatRow[] | null }) => {
         if (cancelled || !data) return;
-        for (const r of data as ChatRow[]) addRow(r);
+        for (const r of data) addRow(r);
       });
     };
 
