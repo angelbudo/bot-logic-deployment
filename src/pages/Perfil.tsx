@@ -209,7 +209,7 @@ function PerfilInner() {
                           <button type="button" className="flex items-center min-w-0 flex-1 text-left hover:opacity-80 transition -ml-[10px] -my-[5px] -mt-[10px] gap-[5px]">
                             <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${f.online ? "bg-gold" : "bg-muted-foreground/40"}`} title={f.online ? "Connectat" : "Desconnectat"} />
                             <div className="min-w-0">
-                              <div className="font-medium truncate text-foreground text-neutral-900">{f.other.username ?? "Jugador anònim"}</div>
+                              <div className="font-medium truncate text-foreground text-neutral-900 normal-case">{f.other.username ?? "Jugador anònim"}</div>
                               <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
                                 <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Nivell"><Star className="w-3.5 h-3.5" /> {f.stats?.level ?? 1}</span>
                                 <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
@@ -242,7 +242,7 @@ function PerfilInner() {
                         fallbackName={f.other.username ?? "Jugador"}
                         trigger={
                           <button type="button" className="min-w-0 flex-1 text-left hover:opacity-80 transition">
-                            <div className="font-medium truncate text-foreground text-neutral-900">{f.other.username ?? "Jugador anònim"}</div>
+                            <div className="font-medium truncate text-foreground text-neutral-900 normal-case">{f.other.username ?? "Jugador anònim"}</div>
                             <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
                               <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Nivell"><Star className="w-3.5 h-3.5" /> {f.stats?.level ?? 1}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
@@ -282,7 +282,7 @@ function PerfilInner() {
                         fallbackName={f.other.username ?? "Jugador"}
                         trigger={
                           <button type="button" className="min-w-0 flex-1 text-left hover:opacity-80 transition">
-                            <div className="font-medium truncate text-foreground text-neutral-900">{f.other.username ?? "Jugador anònim"}</div>
+                            <div className="font-medium truncate text-foreground text-neutral-900 normal-case">{f.other.username ?? "Jugador anònim"}</div>
                             <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
                               <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Nivell"><Star className="w-3.5 h-3.5" /> {f.stats?.level ?? 1}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
