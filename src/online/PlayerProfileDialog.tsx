@@ -193,7 +193,7 @@ export function PlayerProfileDialog({
             )}
 
             <div className="mt-2">
-              <div className="text-[10px] font-display tracking-widest uppercase text-primary/85 flex items-center gap-1.5 mb-2 text-[#e6b033]">
+              <div className="text-[10px] font-display tracking-widest uppercase text-primary/85 flex items-center gap-1.5 text-[#e6b033]">
                 <Users className="w-4 h-4 text-[#e6b033]" /> <span className="text-[#e6b033]">Amics ({friendsList.length})</span>
               </div>
               {friendsList.length === 0 ? (
