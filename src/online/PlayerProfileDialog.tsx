@@ -39,9 +39,9 @@ interface PublicFriend {
 
 function StatBox({ icon, label, value, accent, valueClassName, labelClassName }: { icon: React.ReactNode; label: string; value: React.ReactNode; accent?: string; valueClassName?: string; labelClassName?: string }) {
   return (
-    <div className="rounded-md border border-primary/25 bg-background/40 p-2 flex flex-col items-center justify-center text-center">
-      <div className={`flex items-center gap-1 text-[10px] tracking-widest ${accent ?? "text-muted-foreground"}`}>
-        {icon} <span className={labelClassName}>{label}</span>
+    <div className="rounded-md border border-primary/25 bg-background/40 p-3 text-center">
+      <div className={`flex items-center justify-center gap-1 text-xs font-bold mb-1 ${accent ?? "text-muted-foreground"}`}>
+        {icon}<span className={labelClassName}>{label}</span>
       </div>
       <div className={`text-xl font-bold ${valueClassName ?? accent ?? "text-foreground"}`}>{value}</div>
     </div>
@@ -193,7 +193,7 @@ export function PlayerProfileDialog({
             )}
 
             <div className="mt-2">
-              <div className="text-[10px] font-display tracking-widest uppercase text-primary/85 flex items-center gap-1.5 mb-2 text-[#e6b033]">
+              <div className="text-[10px] font-display tracking-widest uppercase text-primary/85 flex items-center gap-1.5 text-[#e6b033]">
                 <Users className="w-4 h-4 text-[#e6b033]" /> <span className="text-[#e6b033]">Amics ({friendsList.length})</span>
               </div>
               {friendsList.length === 0 ? (
