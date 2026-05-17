@@ -579,11 +579,11 @@ function TableCard({
 
   return (
     <div className={`flex flex-col gap-2 ${isNonPlayable ? "opacity-50" : isPlaying && !canResume ? "opacity-70" : ""}`}>
-      <div className="flex items-center justify-between">
+      <div className="flex items-start justify-between gap-2">
         <span className="text-[11px] font-display tracking-widest uppercase text-primary/85">
           {t("lobby.table")} {room.code}
         </span>
-        <span className="text-[10px] text-muted-foreground">
+        <div className="text-[10px] text-muted-foreground text-right leading-tight">
           {isNonPlayable ? (
             <span className="text-destructive font-semibold uppercase">
               {room.status === "finished" ? t("lobby.finished") : t("lobby.closed")}
@@ -595,29 +595,16 @@ function TableCard({
               <span className="text-destructive font-semibold uppercase">{t("lobby.in_play")}</span>
             )
           ) : (
-            t("lobby.humans_count", { joined: humansJoined, total: humanSeats, cames: room.targetCames, plural: room.targetCames === 1 ? "" : "es" })
+            <div className="flex flex-col items-end gap-0.5">
+              <span>Jugadors: <strong className="text-foreground">{humansJoined}/{humanSeats} humans</strong></span>
+              <span>Cames a guanyar: <strong className="text-foreground">{room.targetCames}</strong></span>
+              <span>Punts per cama: <strong className="text-foreground">{room.targetCama}</strong></span>
+              <span>Temps per torn: <strong className="text-foreground">{room.turnTimeoutSec}s</strong></span>
+            </div>
           )}
-        </span>
+        </div>
       </div>
       <TableSeatPicker seats={seats} onSeatClick={handleSeatClick} showTeams={false} />
-      {!isNonPlayable && (
-        <div className="text-[10px] text-muted-foreground text-center leading-tight">
-          <span>
-            {t("sala.cames_to_win")}{" "}
-            <strong className="text-foreground">{room.targetCames}</strong>
-          </span>
-          {" · "}
-          <span>
-            {t("sala.points_per_cama")}{" "}
-            <strong className="text-foreground">{room.targetCama}</strong>
-          </span>
-          {" · "}
-          <span>
-            {t("sala.turn_time")}{" "}
-            <strong className="text-foreground">{room.turnTimeoutSec}s</strong>
-          </span>
-        </div>
-      )}
       {!isNonPlayable && isPlaying && canResume && onResume && (
         <Button
           size="sm"
