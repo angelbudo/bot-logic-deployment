@@ -2,7 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Star, Trophy, Flame, Gamepad2, X, ThumbsDown, UserPlus, Users } from "lucide-react";
+import { Loader2, Star, Trophy, Flame, Gamepad2, X, ThumbsDown, UserPlus, Users, Award } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { sendFriendRequestByCode } from "@/lib/friends";
