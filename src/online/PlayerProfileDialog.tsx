@@ -39,9 +39,9 @@ interface PublicFriend {
 
 function StatBox({ icon, label, value, accent, valueClassName, labelClassName }: { icon: React.ReactNode; label: string; value: React.ReactNode; accent?: string; valueClassName?: string; labelClassName?: string }) {
   return (
-    <div className="rounded-md border border-primary/25 bg-background/40 p-2 flex flex-col items-center justify-center text-center">
-      <div className={`flex items-center gap-1 text-[10px] tracking-widest ${accent ?? "text-muted-foreground"}`}>
-        {icon} <span className={labelClassName}>{label}</span>
+    <div className="rounded-md border border-primary/25 bg-background/40 p-3 text-center">
+      <div className={`flex items-center justify-center gap-1 text-xs font-bold mb-1 ${accent ?? "text-muted-foreground"}`}>
+        {icon}<span className={labelClassName}>{label}</span>
       </div>
       <div className={`text-xl font-bold ${valueClassName ?? accent ?? "text-foreground"}`}>{value}</div>
     </div>
