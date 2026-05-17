@@ -238,6 +238,54 @@ export type Database = {
         }
         Relationships: []
       }
+      rooms: {
+        Row: {
+          bot_intents: Json
+          code: string
+          created_at: string
+          host_device: string
+          id: string
+          initial_mano: number
+          match_state: Json | null
+          paused_at: string | null
+          seat_kinds: Database["public"]["Enums"]["seat_kind"][]
+          status: Database["public"]["Enums"]["room_status"]
+          target_cames: number
+          turn_started_at: string | null
+          updated_at: string
+        }
+        Insert: {
+          bot_intents?: Json
+          code: string
+          created_at?: string
+          host_device: string
+          id?: string
+          initial_mano?: number
+          match_state?: Json | null
+          paused_at?: string | null
+          seat_kinds: Database["public"]["Enums"]["seat_kind"][]
+          status?: Database["public"]["Enums"]["room_status"]
+          target_cames?: number
+          turn_started_at?: string | null
+          updated_at?: string
+        }
+        Update: {
+          bot_intents?: Json
+          code?: string
+          created_at?: string
+          host_device?: string
+          id?: string
+          initial_mano?: number
+          match_state?: Json | null
+          paused_at?: string | null
+          seat_kinds?: Database["public"]["Enums"]["seat_kind"][]
+          status?: Database["public"]["Enums"]["room_status"]
+          target_cames?: number
+          turn_started_at?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       sala_chat: {
         Row: {
           created_at: string
@@ -471,7 +519,8 @@ export type Database = {
       }
     }
     Enums: {
-      [_ in never]: never
+      room_status: "lobby" | "playing" | "finished" | "abandoned"
+      seat_kind: "human" | "bot" | "empty"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -598,6 +647,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      room_status: ["lobby", "playing", "finished", "abandoned"],
+      seat_kind: ["human", "bot", "empty"],
+    },
   },
 } as const
