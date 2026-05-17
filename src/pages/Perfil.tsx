@@ -147,7 +147,7 @@ function PerfilInner() {
                 <StatBox icon={<Trophy className="w-4 h-4 text-[#ef8e39]" />} label="Victòries" value={wins} accent="text-primary font-bold text-[#ef8e39]" valueClassName="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#ef8e39]" />
                 <StatBox icon={<X className="w-4 h-4 text-[#df2020]" />} label="Derrotes" value={losses} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-[#df2020]" />
                 <StatBox icon={<Trophy className="w-4 h-4 text-[#e6b033]" />} label="% Victòries" value={`${winRate}%`} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#e6b033]" />
-                <StatBox icon={<Flame className="w-4 h-4 text-[#f97415]" />} label="Ratxa màx." value={stats?.max_streak ?? 0} accent="font-bold text-slate-100" labelClassName="text-[#f97415]" />
+                <StatBox icon={<Flame className="w-4 h-4 text-[#66a50d]" />} label="Ratxa màx." value={stats?.max_streak ?? 0} accent="font-bold text-slate-100" labelClassName="text-[#66a50d]" />
               </div>
 
               <div className="p-3 flex items-center justify-center gap-3">
@@ -215,7 +215,7 @@ function PerfilInner() {
                                 <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
                                 <span className="inline-flex items-center gap-0.5 text-[#ef8e39]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.stats?.wins ?? 0}</span>
                                 <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.stats?.losses ?? 0}</span>
-                                <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
+                                <span className="inline-flex items-center gap-0.5 text-[#66a50d]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
                               </div>
                             </div>
                           </button>
@@ -248,7 +248,7 @@ function PerfilInner() {
                               <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#ef8e39]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.stats?.wins ?? 0}</span>
                               <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.stats?.losses ?? 0}</span>
-                              <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
+                              <span className="inline-flex items-center gap-0.5 text-[#66a50d]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
                             </div>
                           </button>
                         }
@@ -288,7 +288,7 @@ function PerfilInner() {
                               <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#ef8e39]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.stats?.wins ?? 0}</span>
                               <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.stats?.losses ?? 0}</span>
-                              <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
+                              <span className="inline-flex items-center gap-0.5 text-[#66a50d]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
                             </div>
                           </button>
                         }
