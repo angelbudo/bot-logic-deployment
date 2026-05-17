@@ -34,7 +34,7 @@ function Board({ kind }: { kind: LeaderboardKind }) {
       level: { icon: <Star className="w-4 h-4 text-[#f97415]" />, value: e.stats.level, className: "text-[#f97415]", style: undefined as CSSProperties | undefined },
       games: { icon: <WalletCards className="w-4 h-4 text-[#93c572]" />, value: games, className: "text-[#93c572]", style: undefined },
       wins: { icon: <Trophy className="w-4 h-4 text-[#ef8e39]" />, value: e.stats.wins, className: "text-[#ef8e39]", style: undefined },
-      streak: { icon: <Flame className="w-4 h-4 text-[#f97415]" />, value: e.stats.max_streak, className: "text-[#66a50d]", style: undefined },
+      streak: { icon: <Flame className="w-4 h-4 text-[#66a50d]" />, value: e.stats.max_streak, className: "text-[#66a50d]", style: undefined },
     }[kind];
         return (
           <PlayerProfileDialog
