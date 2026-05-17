@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Trophy, Flame, Star, Users, Copy, UserPlus, Check, X, LogOut, WalletCards, ThumbsDown } from "lucide-react";
+import { Loader2, Trophy, Flame, Star, Users, Copy, UserPlus, Check, X, LogOut, Gamepad2, ThumbsDown } from "lucide-react";
 import { toast } from "sonner";
 import { ShareAppButton } from "@/components/ShareAppButton";
 import { AvatarPicker } from "@/components/AvatarPicker";
