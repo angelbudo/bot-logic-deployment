@@ -2,7 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Star, Trophy, Flame, WalletCards, X, ThumbsDown, UserPlus, Users } from "lucide-react";
+import { Loader2, Star, Trophy, Flame, Gamepad2, X, ThumbsDown, UserPlus, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { sendFriendRequestByCode } from "@/lib/friends";
@@ -175,7 +175,7 @@ export function PlayerProfileDialog({
             )}
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              <StatBox icon={<WalletCards className="w-3 h-3 text-[#93c572]" />} label="Partides" value={total} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#93c572]" />
+              <StatBox icon={<Gamepad2 className="w-3 h-3 text-[#93c572]" />} label="Partides" value={total} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#93c572]" />
               <StatBox icon={<ThumbsDown className="w-3 h-3 text-stone-500" />} label="Abandonades" value={profile.abandoned} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-stone-500" />
               <StatBox icon={<Trophy className="w-3 h-3 text-[#ef8e39]" />} label="Victòries" value={profile.wins} accent="text-primary font-bold text-[#ef8e39]" valueClassName="text-slate-100" labelClassName="text-[#ef8e39]" />
               <StatBox icon={<X className="w-3 h-3 text-[#df2020]" />} label="Derrotes" value={profile.losses} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-[#df2020]" />
@@ -224,7 +224,7 @@ export function PlayerProfileDialog({
                               <div className="font-medium truncate text-foreground text-neutral-900">{fname}</div>
                               <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
                                 <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Nivell"><Star className="w-3.5 h-3.5" /> {f.level}</span>
-                                <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><WalletCards className="w-3.5 h-3.5" /> {f.wins + f.losses}</span>
+                                <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {f.wins + f.losses}</span>
                                 <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.wins}</span>
                                 <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.losses}</span>
                                 <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.max_streak}</span>

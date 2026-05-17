@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Trophy, Flame, Star, Users, Copy, UserPlus, Check, X, LogOut, WalletCards, ThumbsDown } from "lucide-react";
+import { Loader2, Trophy, Flame, Star, Users, Copy, UserPlus, Check, X, LogOut, Gamepad2, ThumbsDown } from "lucide-react";
 import { toast } from "sonner";
 import { ShareAppButton } from "@/components/ShareAppButton";
 import { AvatarPicker } from "@/components/AvatarPicker";
@@ -142,7 +142,7 @@ function PerfilInner() {
               <UsernameField current={profile?.username ?? null} onSaved={() => { void reload(); }} />
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                <StatBox icon={<WalletCards className="w-4 h-4 text-[#93c572]" />} label="Partides" value={total} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#93c572]" />
+                <StatBox icon={<Gamepad2 className="w-4 h-4 text-[#93c572]" />} label="Partides" value={total} accent="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#93c572]" />
                 <StatBox icon={<ThumbsDown className="w-4 h-4 text-stone-500" />} label="Abandonades" value={stats?.abandoned ?? 0} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-stone-500" />
                 <StatBox icon={<Trophy className="w-4 h-4 text-[#e6b033]" />} label="Victòries" value={wins} accent="text-primary font-bold text-[#e6b033]" valueClassName="text-foreground/30 font-bold text-slate-100" labelClassName="text-[#e6b033]" />
                 <StatBox icon={<X className="w-4 h-4 text-[#df2020]" />} label="Derrotes" value={losses} accent="text-foreground/30 font-bold text-slate-100 text-[#df2020]" labelClassName="text-[#df2020]" />
@@ -212,7 +212,7 @@ function PerfilInner() {
                               <div className="font-medium truncate text-foreground text-neutral-900">{f.other.username ?? "Jugador anònim"}</div>
                               <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
                                 <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Nivell"><Star className="w-3.5 h-3.5" /> {f.stats?.level ?? 1}</span>
-                                <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><WalletCards className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
+                                <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
                                 <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.stats?.wins ?? 0}</span>
                                 <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.stats?.losses ?? 0}</span>
                                 <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
@@ -245,7 +245,7 @@ function PerfilInner() {
                             <div className="font-medium truncate text-foreground text-neutral-900">{f.other.username ?? "Jugador anònim"}</div>
                             <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
                               <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Nivell"><Star className="w-3.5 h-3.5" /> {f.stats?.level ?? 1}</span>
-                              <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><WalletCards className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
+                              <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.stats?.wins ?? 0}</span>
                               <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.stats?.losses ?? 0}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
@@ -285,7 +285,7 @@ function PerfilInner() {
                             <div className="font-medium truncate text-foreground text-neutral-900">{f.other.username ?? "Jugador anònim"}</div>
                             <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold leading-none">
                               <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Nivell"><Star className="w-3.5 h-3.5" /> {f.stats?.level ?? 1}</span>
-                              <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><WalletCards className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
+                              <span className="inline-flex items-center gap-0.5 text-[#93c572]" title="Partides"><Gamepad2 className="w-3.5 h-3.5" /> {(f.stats?.wins ?? 0) + (f.stats?.losses ?? 0)}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#e6b033]" title="Victòries"><Trophy className="w-3.5 h-3.5" /> {f.stats?.wins ?? 0}</span>
                               <span className="inline-flex items-center gap-0.5 text-destructive" title="Derrotes"><X className="w-3.5 h-3.5" /> {f.stats?.losses ?? 0}</span>
                               <span className="inline-flex items-center gap-0.5 text-[#f97415]" title="Ratxa màx."><Flame className="w-3.5 h-3.5" /> {f.stats?.max_streak ?? 0}</span>
