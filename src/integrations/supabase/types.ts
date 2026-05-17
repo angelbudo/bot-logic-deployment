@@ -67,7 +67,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      _lov_exec: { Args: { s: string }; Returns: undefined }
     }
     Enums: {
       room_status: "lobby" | "playing" | "finished" | "abandoned"
