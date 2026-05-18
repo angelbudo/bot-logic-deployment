@@ -577,8 +577,10 @@ function TableCard({
     onSeatClick(seat);
   };
 
+  const showLobbyInfo = !isNonPlayable && !isPlaying;
+
   return (
-    <div className={`flex flex-col gap-2 ${isNonPlayable ? "opacity-50" : isPlaying && !canResume ? "opacity-70" : ""}`}>
+    <div className={`relative flex flex-col gap-2 ${isNonPlayable ? "opacity-50" : isPlaying && !canResume ? "opacity-70" : ""}`}>
       <div className="flex items-start justify-between gap-2">
         <span className="text-[11px] font-display tracking-widest uppercase text-primary/85">
           {t("lobby.table")} {room.code}
@@ -595,16 +597,19 @@ function TableCard({
               <span className="text-destructive font-semibold uppercase">{t("lobby.in_play")}</span>
             )
           ) : (
-            <div className="flex flex-col items-end gap-0.5">
-              <span>Jugadors: <strong className="text-foreground">{humansJoined}/{humanSeats} humans</strong></span>
-              <span>Cames a guanyar: <strong className="text-foreground">{room.targetCames}</strong></span>
-              <span>Punts per cama: <strong className="text-foreground">{room.targetCama}</strong></span>
-              <span>Temps per torn: <strong className="text-foreground">{room.turnTimeoutSec}s</strong></span>
-            </div>
+            <span>Jugadors: <strong className="text-foreground">{humansJoined}/{humanSeats} humans</strong></span>
           )}
         </div>
       </div>
       <TableSeatPicker seats={seats} onSeatClick={handleSeatClick} showTeams={false} />
+      {showLobbyInfo && (
+        <div className="pointer-events-none absolute right-0 bottom-0 h-8 flex flex-col items-end justify-end text-[10px] text-muted-foreground leading-tight gap-0.5">
+          <span>Cames a guanyar: <strong className="text-foreground">{room.targetCames}</strong></span>
+          <span>Punts per cama: <strong className="text-foreground">{room.targetCama}</strong></span>
+          <span>Temps per torn: <strong className="text-foreground">{room.turnTimeoutSec}s</strong></span>
+        </div>
+      )}
+
       {!isNonPlayable && isPlaying && canResume && onResume && (
         <Button
           size="sm"
