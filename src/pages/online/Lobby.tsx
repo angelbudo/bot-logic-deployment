@@ -580,7 +580,7 @@ function TableCard({
   const showLobbyInfo = !isNonPlayable && !isPlaying;
 
   return (
-    <div className={`relative flex flex-col gap-2 ${isNonPlayable ? "opacity-50" : isPlaying && !canResume ? "opacity-70" : ""}`}>
+    <div className={`relative flex flex-col gap-2 mb-[30px] ${isNonPlayable ? "opacity-50" : isPlaying && !canResume ? "opacity-70" : ""}`}>
       <div className="flex items-start justify-between gap-2">
         <span className="text-[11px] font-display tracking-widest uppercase text-primary/85">
           {t("lobby.table")} {room.code}
@@ -603,12 +603,13 @@ function TableCard({
       </div>
       <TableSeatPicker seats={seats} onSeatClick={handleSeatClick} showTeams={false} />
       {showLobbyInfo && (
-        <div className="pointer-events-none absolute right-0 bottom-0 h-8 flex flex-col items-end justify-end text-[10px] text-muted-foreground leading-tight gap-0.5">
+        <div className="h-8 flex flex-col items-end justify-end text-[10px] text-muted-foreground leading-tight gap-0.5">
           <span>Cames a guanyar: <strong className="text-foreground">{room.targetCames}</strong></span>
           <span>Punts per cama: <strong className="text-foreground">{room.targetCama}</strong></span>
           <span>Temps per torn: <strong className="text-foreground">{room.turnTimeoutSec}s</strong></span>
         </div>
       )}
+
 
       {!isNonPlayable && isPlaying && canResume && onResume && (
         <Button
@@ -673,7 +674,7 @@ function PlaceholderTableCard({
   }));
 
   return (
-    <div className="flex flex-col gap-2 opacity-90" data-placeholder-index={index}>
+    <div className="flex flex-col gap-2 opacity-90 mb-[30px]" data-placeholder-index={index}>
       <div className="flex items-center justify-between">
         <span className="text-[11px] font-display tracking-widest uppercase text-primary/60">
           {t("lobby.table")} {code}
