@@ -206,7 +206,7 @@ function PerfilInner() {
                         userId={f.other.user_id}
                         fallbackName={f.other.username ?? "Jugador"}
                         trigger={
-                          <button type="button" className="flex items-center min-w-0 flex-1 text-left hover:opacity-80 transition -my-[5px] gap-[5px] -ml-[15px] -mt-[7px]">
+                          <button type="button" className="flex items-center min-w-0 flex-1 text-left hover:opacity-80 transition -my-[5px] gap-[5px] -ml-[15px] -mt-[6px]">
                             <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${f.online ? "bg-gold" : "bg-muted-foreground/40"}`} title={f.online ? "Connectat" : "Desconnectat"} />
                             <div className="min-w-0">
                               <div className="font-medium truncate text-foreground text-neutral-900 normal-case">{f.other.username ?? "Jugador anònim"}</div>
