@@ -293,7 +293,7 @@ function PerfilInner() {
                           </button>
                         }
                       />
-                      <Button size="sm" variant="ghost" className="shrink-0 ml-2 mt-px text-neutral-900" onClick={async () => {
+                      <Button size="sm" variant="ghost" className="shrink-0 ml-2 mt-px text-neutral-900 mb-0" onClick={async () => {
                         try { await removeFriend(f.other.user_id); friends.reload(); }
                         catch (e) { toast.error((e as Error).message); }
                       }}>
