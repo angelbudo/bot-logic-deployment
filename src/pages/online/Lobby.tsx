@@ -580,7 +580,7 @@ function TableCard({
   const showLobbyInfo = !isNonPlayable && !isPlaying;
 
   return (
-    <div className={`relative flex flex-col gap-2 pb-0 ${isNonPlayable ? "opacity-50" : isPlaying && !canResume ? "opacity-70" : ""}`}>
+    <div className={`relative flex flex-col gap-2 ${isNonPlayable ? "opacity-50" : isPlaying && !canResume ? "opacity-70" : ""}`}>
       <div className="flex items-start justify-between gap-2">
         <span className="text-[11px] font-display tracking-widest uppercase text-primary/85">
           {t("lobby.table")} {room.code}
