@@ -674,7 +674,7 @@ function PlaceholderTableCard({
   }));
 
   return (
-    <div className="flex flex-col gap-2 opacity-90" data-placeholder-index={index}>
+    <div className="flex flex-col gap-2 opacity-90 mb-[30px]" data-placeholder-index={index}>
       <div className="flex items-center justify-between">
         <span className="text-[11px] font-display tracking-widest uppercase text-primary/60">
           {t("lobby.table")} {code}
